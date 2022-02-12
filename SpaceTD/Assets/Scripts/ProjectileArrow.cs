@@ -4,14 +4,35 @@ using UnityEngine;
 
 public class ProjectileArrow : MonoBehaviour
 {
-    public static void Create(Vector3 spawnPosition)
+    public static void Create(Vector3 spawnPosition, Vector3 targetPosition)
     {
-        Instantiate(GameAssets.i.pfProjectile, spawnPosition, Quaternion.identity);
+        Transform arrowTransform = Instantiate(GameAssets.i.pfProjectile, spawnPosition, Quaternion.identity);
+
+        ProjectileArrow projectileArrow = arrowTransform.GetComponent<ProjectileArrow>();
+        projectileArrow.Setup(targetPosition);
+    }
+
+    private Vector3 targetPosition;
+
+    private void Setup(Vector3 targetPosition)
+    {
+        this.targetPosition = targetPosition;
+
     }
 
     private void Update()
     {
+        Vector3 moveDir = (targetPosition - transform.position).normalized;
 
+        float moveSpeed = 20f;
 
+        transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+        float destroySelfDistance = 0.5f;
+
+        if (Vector3.Distance(transform.position, targetPosition) < destroySelfDistance)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
