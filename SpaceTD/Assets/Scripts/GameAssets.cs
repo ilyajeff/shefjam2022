@@ -18,8 +18,6 @@ public class GameAssets : MonoBehaviour
     public Transform pfProjectile;
 
     public Sprite pfEnemy;
-    
-    public Transform pfProjectile2;
 
 }
 

@@ -24,7 +24,7 @@ public class ProjectileArrow : MonoBehaviour
     {
         Vector3 moveDir = (targetPosition - transform.position).normalized;
 
-        float moveSpeed = 20f;
+        float moveSpeed = 750f;
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
