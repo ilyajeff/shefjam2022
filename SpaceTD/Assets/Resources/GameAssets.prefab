@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde914ed9328f5a4aa259b57e4a2317c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfProjectileArrow: {fileID: 3743633921139370621, guid: 8cd44a9c0f1cd4244869f154fd96e9a1, type: 3}
+  pfProjectile: {fileID: 6308761045855529578, guid: ad7dc46dc0d42a4448838d85299c6b1a, type: 3}

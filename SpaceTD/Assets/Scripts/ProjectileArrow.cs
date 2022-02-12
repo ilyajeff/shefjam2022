@@ -6,6 +6,12 @@ public class ProjectileArrow : MonoBehaviour
 {
     public static void Create(Vector3 spawnPosition)
     {
-        Instantiate(GameAssets.i.pfProjectileArrow, spawnPosition, Quaternion.identity);
+        Instantiate(GameAssets.i.pfProjectile, spawnPosition, Quaternion.identity);
+    }
+
+    private void Update()
+    {
+
+
     }
 }
