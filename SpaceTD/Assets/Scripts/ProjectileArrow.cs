@@ -7,11 +7,9 @@ public class ProjectileArrow : MonoBehaviour
     public static void Create(Vector3 spawnPosition, Vector3 targetPosition)
     {
         Transform arrowTransform = Instantiate(GameAssets.i.pfProjectile, spawnPosition, Quaternion.identity);
+
         ProjectileArrow projectileArrow = arrowTransform.GetComponent<ProjectileArrow>();
-        if (projectileArrow != null)
-        {
-            projectileArrow.Setup(targetPosition);
-        }
+        projectileArrow.Setup(targetPosition);
     }
 
     private Vector3 targetPosition;
