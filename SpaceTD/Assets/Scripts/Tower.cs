@@ -17,7 +17,8 @@ public class Tower : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            ProjectileArrow.Create(projectileShootFromPosition, UtilsClass.GetMouseWorldPosition());
+            CMDebug.TextPopupMouse("sus!");
+            ProjectileArrow.Create(UtilsClass.GetMouseWorldPosition());
         }
     }
 
