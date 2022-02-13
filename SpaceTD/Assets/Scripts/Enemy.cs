@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CodeMonkey;
+using CodeMonkey.Utils;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,8 +13,8 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+    
     }
 }
