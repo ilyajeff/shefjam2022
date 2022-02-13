@@ -6,7 +6,7 @@ public class ProjectileArrow : MonoBehaviour
 {
     public static void Create(Vector3 spawnPosition, Vector3 targetPosition)
     {
-        Transform arrowTransform = Instantiate(GameAssets.i.pfProjectile, spawnPosition, Quaternion.identity);
+        Transform arrowTransform = Instantiate(GameAssets.i.pfAlen, spawnPosition, Quaternion.identity);
 
         ProjectileArrow projectileArrow = arrowTransform.GetComponent<ProjectileArrow>();
         projectileArrow.Setup(targetPosition);
@@ -24,15 +24,15 @@ public class ProjectileArrow : MonoBehaviour
     {
         Vector3 moveDir = (targetPosition - transform.position).normalized;
 
-        float moveSpeed = 750f;
+        float moveSpeed = 2000f;
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
-        float destroySelfDistance = 0.5f;
+        /*float destroySelfDistance = 0.5f;
 
         if (Vector3.Distance(transform.position, targetPosition) < destroySelfDistance)
         {
             Destroy(this.gameObject);
-        }
+        }*/
     }
 }

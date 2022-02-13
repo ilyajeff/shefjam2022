@@ -17,6 +17,8 @@ public class GameAssets : MonoBehaviour
 
     public Transform pfProjectile;
 
+    public Transform pfAlen;
+
 }
 
 

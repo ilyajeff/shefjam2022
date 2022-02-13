@@ -13,6 +13,8 @@ public class Tower : MonoBehaviour
         projectileShootFromPosition = transform.Find("ProjectileShootFromPosition").position;
     }
 
+
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
